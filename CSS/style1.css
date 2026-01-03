@@ -58,7 +58,7 @@ nav ul li a.active::after {
 header {
     position: relative;
     height: 450px; 
-    background-image: url('../images/central\ header.png');
+    background-image: url('../Images/central\ header.png');
     background-size: cover;
     background-position: center;
     display: flex;

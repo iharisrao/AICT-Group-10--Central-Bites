@@ -1,3 +1,59 @@
+/* --- GLOBAL STYLES --- */
+body {
+    margin: 0;
+    padding-top: 80px; 
+    font-family: 'Inter', sans-serif; 
+    background-color: #0f172a; 
+    color: white;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background-color: #121212;
+    border-bottom: 1px solid #D4AF37;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: #D4AF37;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #D4AF37;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+
 /* --- HEADER SECTION --- */
 header {
     position: relative;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central VibeGuide - Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Restaurant Directory</a></li>
+        </ul>
+    </nav>
+    <section class="directory-section page-header-spacing">
+    <div class="container">
+        <h2 class="directory-title">Restaurant Directory</h2>
+        <p class="directory-subtitle">Browse all spots in DHA Central Park with live status and ratings.</p>
+    </div>
+</section>
+
+    <div class="container">
+        <div class="tab-buttons">
+            <button id="card-tab" class="active">Card View</button>
+            <button id="table-tab">Table View</button>
+        </div>
+
+        <section id="card-view">
+            <div id="restaurant-grid"></div>
+        </section>
+        <section id="table-view">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Restaurant Name</th>
+                        <th>Cuisine</th>
+                        <th>Avg Price (Rs)</th>
+                        <th>Opening Hours</th>
+                        <th>WiFi</th>
+                        <th>Rating</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="restaurant-table"></tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <p class="footer-credit">Developed by</p>
+            <div class="team-names">
+                <span>Maryam Ejaz Malik</span>
+                <span class="divider">|</span>
+                <span>Marwah Hayat</span>
+                <span class="divider">|</span>
+                <span>Muhammad Haris Rao</span>
+            </div>
+            <p class="footer-copyright">&copy; 2025 DHA Central Park Directory. All rights reserved.</p>
+        </div>
+    </footer>
+        
+</body>
+</html>

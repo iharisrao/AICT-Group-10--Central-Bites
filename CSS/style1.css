@@ -133,3 +133,21 @@ header h1 {
     max-width: 900px;
 }
 
+/* Buttons */
+.button {
+    background-color: #D4AF37;
+    color: #121212;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.button:hover { transform: scale(1.05); background-color: #b8962e; }
+.button.secondary {
+    background-color: #1e1e1e;
+    color: #D4AF37;
+}
+

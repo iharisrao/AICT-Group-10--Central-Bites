@@ -1,0 +1,77 @@
+/* 1. KEEP THIS: This is your "Master" spacing for all pages */
+.page-header-spacing {
+    padding-top: 50px !important; /* Increased to 100px to clear the fixed Nav bar */
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* 2. UPDATE THIS: Remove the top/bottom padding here so it doesn't double up */
+.directory-section {
+    padding: 0 20px; /* Changed from 60px to 0 */
+    text-align: center;          
+}
+
+/* 3. RESET MARGINS: Ensure the title itself isn't adding extra hidden space */
+.directory-title {
+    color: #D4AF37; 
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 0; /* Add this */
+    margin-bottom: 10px;
+}
+
+.directory-subtitle {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* --- TAB BUTTONS --- */
+.tab-buttons { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+.tab-buttons button {
+    background: #1e1e1e; 
+    color: #D4AF37; 
+    border: 1px solid #D4AF37;
+    padding: 12px 30px; 
+    margin: 0 10px; 
+    border-radius: 30px; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tab-buttons button.active { 
+    background: #D4AF37; 
+    color: #121212; 
+}
+/* --- TABLE VIEW --- */
+#table-view { 
+    display: none; 
+    width: 100%; 
+    overflow-x: auto; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #1e293b; 
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td { 
+    padding: 15px; 
+    text-align: left; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+}
+
+th { 
+    background-color: #0f172a; 
+    color: #D4AF37; 
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}

@@ -2,7 +2,7 @@
 const restaurants = [
     {
         name: "McDonald's",
-        image: "../images/mc.jpeg",
+        image: "../Images/mc.jpeg",
         description: "Quick, reliable fast food with burgers and fries – perfect for late-night cravings.",
         vibes: ["Quick Snack", "Family Dinner", "Late Night"],
         walk: "4 min walk",

@@ -46,7 +46,7 @@ const restaurants = [
     },
     {
         name: "Wild Wings",
-        image: "../Images/wildwings.jpeg",
+        image: "../images/wildwings.jpeg",
         description: "Exceptional wings in multiple flavors – perfect for sports nights.",
         vibes: ["Family Dinner", "Late Night"],
         walk: "5 min walk",

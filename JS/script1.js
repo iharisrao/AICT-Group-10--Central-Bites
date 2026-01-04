@@ -35,7 +35,7 @@ const restaurants = [
     },
      {
         name: "Burning Brownie",
-        image:"../Images/burning brownie.jpg",
+        image:"../Images/burningbrownie.jpg",
         description: "Heaven for dessert lovers – signature sizzling brownies and milkshakes.",
         vibes: ["Late Night", "Coffee & Chill"],
         walk: "3 min walk",
@@ -46,7 +46,7 @@ const restaurants = [
     },
     {
         name: "Wild Wings",
-        image: "../Images/wild wings.jpeg",
+        image: "../Images/wild%20wings.jpeg",
         description: "Exceptional wings in multiple flavors – perfect for sports nights.",
         vibes: ["Family Dinner", "Late Night"],
         walk: "5 min walk",

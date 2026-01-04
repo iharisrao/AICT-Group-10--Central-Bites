@@ -22,4 +22,15 @@ const restaurants = [
         openTime: 11,
         closeTime: 2
     },
+    {
+        name: "Pizza Hut",
+        image: "../images/pizzahut.jpg",
+        description: "Freshly baked pan pizzas with unlimited toppings – ideal for group hangouts.",
+        vibes: ["Family Dinner", "Late Night"],
+        walk: "7 min walk",
+        rating: 4.1,
+        reviews: 267,
+        openTime: 11,
+        closeTime: 0 
+    },
 ]

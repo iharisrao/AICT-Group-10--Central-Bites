@@ -254,3 +254,103 @@ const restaurants = [
     closeTime: 23
 }
 ];
+
+// --- 2. LOGIC: Helpers (Time & Stars) ---
+function checkIfOpen(openHour, closeHour) {
+    const currentHour = new Date().getHours();
+    if (openHour === 0 && closeHour === 24) return true;
+    if (closeHour < openHour) return currentHour >= openHour || currentHour < closeHour;
+    return currentHour >= openHour && currentHour < closeHour;
+}
+
+function generateStars(rating) {
+    let html = '';
+    const full = Math.floor(rating);
+    for (let i = 1; i <= 5; i++) {
+        html += i <= full ? '<span class="filled">★</span>' : '<span class="empty">☆</span>';
+    }
+    return html;
+}
+
+function formatTime(h) {
+    if (h === 0) return "12 AM";
+    if (h === 24) return "24 Hours";
+    return h > 12 ? `${h - 12} PM` : `${h} AM`;
+}
+
+// --- 3. RENDERERS: Card View & Table View ---
+function createCard(r) {
+    const isCurrentlyOpen = checkIfOpen(r.openTime, r.closeTime);
+    const statusClass = isCurrentlyOpen ? 'open' : 'closed'; 
+    return `
+        <div class="restaurant-card">
+            <div class="image-container">
+                <img src="${r.image}" alt="${r.name}">
+                <span class="status-badge ${statusClass}">${isCurrentlyOpen ? 'OPEN' : 'CLOSED'}</span>
+            </div>
+            <div class="card-content">
+                <h3>${r.name}</h3>
+                <div class="rating">
+                    <div class="stars">${generateStars(r.rating)}</div> ${r.rating} (${r.reviews} reviews)
+                </div>
+                <p class="restaurant-description">${r.description}</p>
+                <div class="vibe-tags">${r.vibes.map(v => `<span class="vibe-tag">${v}</span>`).join('')}</div>
+                <div class="walk-distance">${r.walk}</div>
+            </div>
+        </div>`;
+}
+
+function renderDirectory() {
+    const grid = document.getElementById('restaurant-grid');
+    const tableBody = document.getElementById('restaurant-table');
+
+    if (grid) {
+        grid.innerHTML = restaurants.map(r => createCard(r)).join('');
+    }
+
+    if (tableBody) {
+        tableBody.innerHTML = restaurants.map(r => {
+            const isCurrentlyOpen = checkIfOpen(r.openTime, r.closeTime);
+            return `
+                <tr>
+                    <td><strong>${r.name}</strong></td>
+                    <td>${r.vibes[0]}</td>
+                    <td>Variable</td>
+                    <td>${formatTime(r.openTime)} - ${formatTime(r.closeTime)}</td>
+                    <td>Yes</td>
+                    <td>${r.rating} ⭐</td>
+                    <td class="${isCurrentlyOpen ? 'status-open' : 'status-closed'}">${isCurrentlyOpen ? 'OPEN' : 'CLOSED'}</td>
+                </tr>`;
+        }).join('');
+    }
+}
+
+// --- 4. NAVIGATION: Tab Switching ---
+function setupTabs() {
+    const cardTab = document.getElementById('card-tab');
+    const tableTab = document.getElementById('table-tab');
+    const cardView = document.getElementById('card-view');
+    const tableView = document.getElementById('table-view');
+
+    if (cardTab && tableTab) {
+        cardTab.onclick = () => {
+            cardTab.classList.add('active');
+            tableTab.classList.remove('active');
+            cardView.style.display = 'block';
+            tableView.style.display = 'none';
+        };
+
+        tableTab.onclick = () => {
+            tableTab.classList.add('active');
+            cardTab.classList.remove('active');
+            tableView.style.display = 'block';
+            cardView.style.display = 'none';
+        };
+    }
+}
+
+// --- 5. INITIALIZE ---
+window.onload = () => {
+    renderDirectory();
+    setupTabs();
+};

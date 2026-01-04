@@ -169,7 +169,7 @@ const restaurants = [
     name: "Tim Hortons",
     image: "../Images/tims.jpg",
     description: "Coffee, donuts, and quick breakfast favorites all day.",
-    vibes: ["Coffee & Chill", "Quick Snack"],
+    vibes: ["Coffee& Chill", "Quick Snack"],
     walk: "5 min walk",
     rating: 4.2,
     reviews: 520,

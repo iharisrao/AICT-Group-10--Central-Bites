@@ -1,0 +1,115 @@
+/* --- GLOBAL STYLES --- */
+body {
+    margin: 0;
+    padding-top: 80px; 
+    font-family: 'Inter', sans-serif; 
+    background-color: #0f172a; 
+    color: white;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background-color: #121212;
+    border-bottom: 1px solid #D4AF37;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: #D4AF37;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+
+/* --- 1. THE MASTER RULE (Keep this at 100px for all pages) --- */
+.page-header-spacing {
+    padding-top: 50px !important; /* Increased to 50px to clear the fixed Nav bar */
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+/* --- 2. THE CLEANED TEAM SECTION --- */
+#team-section {
+    text-align: center; 
+    padding: 0 20px 20px 20px; /* Changed top padding from 60px to 0 */
+    margin-top: 0px;               
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove default top margins from the headings */
+#team-section h2 {
+    font-size: 2.8rem;
+    color: #D4AF37; 
+    margin: 0 0 10px 0; /* Ensures the title sits exactly where we want it */
+    font-weight: 700;
+}
+
+#team-section .subtitle {
+    color: #94a3b8; 
+    font-size: 1.1rem;
+    margin: 0 0 40px 0; 
+}
+
+#team-grid {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.team-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: #D4AF37;
+    transform: translateY(-10px);
+}
+
+.team-placeholder {
+    background: linear-gradient(135deg, #D4AF37 0%, #f5e0a3 100%);
+    color: #121212;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card h3 { color: #ffffff; font-size: 1.4rem; margin-bottom: 8px; }
+.team-card p { color: #D4AF37; font-style: italic; font-weight: 300; }

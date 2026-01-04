@@ -36,23 +36,6 @@ nav ul li a {
     transition: 0.3s;
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background-color: #D4AF37;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-    width: 100%;
-}
-
 /* 1. KEEP THIS: This is your "Master" spacing for all pages */
 .page-header-spacing {
     padding-top: 50px !important; /* Increased to 100px to clear the fixed Nav bar */

@@ -37,13 +37,13 @@ We used a **GitHub Project Board** to manage our tasks and ensure timely deliver
 2.  **In Progress:** Active coding and debugging.
 3.  **Done:** Finalized tasks, including deployment and documentation.
 
-[View our Project Board here]() 
+[View our Project Board here](https://github.com/users/iharisrao/projects/4) 
 
 ---
 
 🚀 Live Demo
 You can visit our live website here:
-[Central Bites Live Link]()
+[Central Bites Live Link](https://iharisrao.github.io/AICT-Group-10--Central-Bites/)
 
 ---
 © 2025 Group 10 AICT Project

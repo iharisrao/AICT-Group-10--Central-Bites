@@ -37,7 +37,7 @@ const restaurants = [
         name: "Burning Brownie",
         image:"../Images/burning.jpg",
         description: "Heaven for dessert lovers – signature sizzling brownies and milkshakes.",
-        vibes: ["Late Night", "Coffee & Chill"],
+        vibes: ["Late Night`", "Coffee & Chill"],
         walk: "3 min walk",
         rating: 4.6,
         reviews: 156,
@@ -57,7 +57,7 @@ const restaurants = [
     },
     {
         name: "Alibaba Doner Kebab",
-        image: "../Images/ali%20baba.jpeg",
+        image: "../Images/ali.jpeg",
         description: "Authentic Turkish flavors with juicy kebabs and fresh wraps.",
         vibes: ["Quick Snack", "Late Night"],
         walk: "5 min walk",
@@ -68,7 +68,7 @@ const restaurants = [
     },
     {
         name: "Subway",
-        image: "../Images/sub%20way.jpeg",
+        image: "../Images/sub.jpeg",
         description: "Build your own fresh sandwiches and salads exactly the way you like.",
         vibes: ["Quick Snack", "Family Dinner"],
         walk: "3 min walk",
@@ -112,7 +112,7 @@ const restaurants = [
     },
     {
         name: "Soft Swirl",
-        image: "../Images/soft%20swirl.jpeg",
+        image: "../Images/soft.jpeg",
         description: "A trendy spot with a mix of continental and fast food.",
         vibes: ["Coffee & Chill", "Family Dinner"],
         walk: "5 min walk",
@@ -123,7 +123,7 @@ const restaurants = [
     },
     {
         name: "De afghan",
-        image: "../Images/de%20afghan.jpeg",
+        image: "../Images/afghan.jpeg",
         description: "Famous desi food that are perfect for a traditional lunch.",
         vibes: [ "Family dinner","Quick Snack"],
         walk: "8 min walk",
@@ -134,7 +134,7 @@ const restaurants = [
     },
     {
     name: "Namak Mirch",
-    image: "../Images/namak%20mirch.jpeg",
+    image: "../Images/namak.jpeg",
     description: "Bold and spicy desi dishes packed with authentic Pakistani flavors.",
     vibes: ["Family dinner", "Spicy Food"],
     walk: "10 min walk",
@@ -156,7 +156,7 @@ const restaurants = [
 },
 {
     name: "Nom Nom Wok",
-    image: "../Images/nom%20nom%20wok.jpeg",
+    image: "../Images/nom.jpeg",
     description: "Fresh Asian wok dishes made fast with flavorful sauces.",
     vibes: ["Quick Bite", "Street Food"],
     walk: "7 min walk",
@@ -200,7 +200,7 @@ const restaurants = [
 },
 {
     name: "Chucky's Chicken",
-    image: "../Images/chucky%20chicken.jpeg",
+    image: "../Images/chucky.jpeg",
     description: "Crispy fried chicken served hot with classic sides.",
     vibes: ["Comfort Food", "Casual"],
     walk: "8 min walk",
@@ -222,7 +222,7 @@ const restaurants = [
 },
 {
     name: "Costa Coffee",
-    image: "../Images/costa%20coffee.jpeg",
+    image: "../Images/costa.jpeg",
     description: "Smooth handcrafted coffee, pastries, and light café bites.",
     vibes: ["Coffee Break", "Relaxed"],
     walk: "6 min walk",
@@ -233,7 +233,7 @@ const restaurants = [
 },
 {
     name: "Spice Factory",
-    image: "../Images/spice%20factory.jpeg",
+    image: "../Images/spice.jpeg",
     description: "Rich desi flavors with spicy curries, BBQ, and classic favorites.",
     vibes: ["Family Dinner", "Spicy Food"],
     walk: "11 min walk",
@@ -244,7 +244,7 @@ const restaurants = [
 },
 {
     name: "Casa Rica",
-    image: "../Images/casa%20rica.jpeg",
+    image: "../Images/casa.jpeg",
     description: "Delicious ice cream, desserts, and sweet treats for all ages.",
     vibes: ["Dessert Spot", "Family Friendly"],
     walk: "7 min walk",

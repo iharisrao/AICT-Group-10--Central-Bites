@@ -212,7 +212,148 @@ header h1 {
     width: 100%;
 }
 
+/* UPDATED STATUS BADGES */
+.status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
 
+.status-badge.open {
+    background-color: #28a745;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-badge.closed {
+    background-color: #dc3545;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.restaurant-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.restaurant-description {
+    color: #a0aec0;
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 8px;
+}
+.vibe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+.vibe-tag {
+    background-color: #2a2a2a;
+    color: #D4AF37;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    border: 1px solid #D4AF37;
+}
+.walk-distance {
+    color: #aaaaaa;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+.walk-distance::before { content: "📍"; }
+.rating {
+    margin: 8px 0;
+    color: #D4AF37;
+    font-size: 0.95em;
+}
+.rating .stars { font-size: 1.1em; margin-right: 5px; }
+.rating .stars .empty { color: #444; }
+
+/* Grid Styles */
+#restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* --- SPIN THE PLATE (MODAL) FIXES --- */
+#random-restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* This centers everything inside your Modal */
+#modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark blur background */
+    
+    /* THE MAGIC LINES FOR CENTERING: */
+    justify-content: center; 
+    align-items: center;
+}
+
+/* This makes sure the card inside the modal doesn't look "stupid" or stretched */
+.modal-card-wrapper {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#random-restaurant .restaurant-card {
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border-color: #D4AF37; /* Highlight the winner */
+}
 
 
 /* --- FOOTER SECTION --- */
@@ -244,4 +385,21 @@ footer {
 .footer-copyright {
     color: #64748b; font-size: 0.8rem; padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.05); display: inline-block;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 992px) {
+    #restaurant-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; }
+    header { height: 300px; }
+    header h1 { font-size: 2.5em; }
+}
+
+@media (max-width: 600px) {
+    #restaurant-grid { grid-template-columns: 1fr; }
+    .team-names { display: flex; flex-direction: column; gap: 10px; }
+    .team-names .divider { display: none; }
 }

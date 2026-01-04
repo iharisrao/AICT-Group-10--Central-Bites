@@ -200,7 +200,7 @@ const restaurants = [
 },
 {
     name: "Chucky's Chicken",
-    image: "../Images/chucky.jpeg",
+    image: "../Images/chuckys.jpeg",
     description: "Crispy fried chicken served hot with classic sides.",
     vibes: ["Comfort Food", "Casual"],
     walk: "8 min walk",
@@ -222,7 +222,7 @@ const restaurants = [
 },
 {
     name: "Costa Coffee",
-    image: "../Images/costa.jpeg",
+    image: "../Imasges/costa.jpeg",
     description: "Smooth handcrafted coffee, pastries, and light café bites.",
     vibes: ["Coffee Break", "Relaxed"],
     walk: "6 min walk",

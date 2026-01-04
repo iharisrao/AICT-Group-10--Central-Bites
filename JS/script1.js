@@ -35,7 +35,7 @@ const restaurants = [
     },
      {
         name: "Burning Brownie",
-        image:"..Images/burningbrownie.jpg",
+        image:"../Images/burningbrownie.jpg",
         description: "Heaven for dessert lovers – signature sizzling brownies and milkshakes.",
         vibes: ["Late Night", "Coffee & Chill"],
         walk: "3 min walk",

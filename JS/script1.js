@@ -222,7 +222,7 @@ const restaurants = [
 },
 {
     name: "Costa Coffee",
-    image: "../Imasges/costa.jpeg",
+    image: "../Images/costa.jpeg",
     description: "Smooth handcrafted coffee, pastries, and light café bites.",
     vibes: ["Coffee Break", "Relaxed"],
     walk: "6 min walk",

@@ -254,7 +254,7 @@ const restaurants = [
     closeTime: 23
 }
 
-]
+];
 
 function createCard(r) {
     const isCurrentlyOpen = checkIfOpen(r.openTime, r.closeTime);
@@ -279,4 +279,5 @@ function createCard(r) {
             </div>
         </div>`;
 }
+
 

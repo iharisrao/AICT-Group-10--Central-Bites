@@ -53,9 +53,6 @@ nav ul li a.active::after {
     width: 100%;
 }
 
-
-
-
 /* 1. KEEP THIS: This is your "Master" spacing for all pages */
 .page-header-spacing {
     padding-top: 50px !important; /* Increased to 100px to clear the fixed Nav bar */

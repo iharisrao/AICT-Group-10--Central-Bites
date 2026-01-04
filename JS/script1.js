@@ -255,3 +255,28 @@ const restaurants = [
 }
 
 ]
+
+function createCard(r) {
+    const isCurrentlyOpen = checkIfOpen(r.openTime, r.closeTime);
+    const status = isCurrentlyOpen ? 'OPEN' : 'CLOSED';
+    const statusClass = isCurrentlyOpen ? 'open' : 'closed'; 
+    const vibes = r.vibes.map(v => `<span class="vibe-tag">${v}</span>`).join('');
+
+    return `
+        <div class="restaurant-card">
+            <div class="image-container">
+                <img src="${r.image}" alt="${r.name}">
+                <span class="status-badge ${statusClass}">${status}</span>
+            </div>
+            <div class="card-content">
+                <h3>${r.name}</h3>
+                <div class="rating">
+                    <div class="stars">${generateStars(r.rating)}</div> ${r.rating} (${r.reviews} reviews)
+                </div>
+                <p class="restaurant-description">${r.description}</p>
+                <div class="vibe-tags">${vibes}</div>
+                <div class="walk-distance">${r.walk}</div>
+            </div>
+        </div>`;
+}
+

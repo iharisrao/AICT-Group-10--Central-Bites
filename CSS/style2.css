@@ -103,6 +103,69 @@ nav ul li a.active::after {
     background: #D4AF37; 
     color: #121212; 
 }
+
+/* --- CARD VIEW GRID --- */
+#restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+}
+
+.restaurant-card {
+    background-color: #1e293b; 
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1); 
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+}
+
+.image-container { position: relative; }
+
+.restaurant-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Status Badges */
+.status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.status-badge.open { background-color: #28a745; }
+.status-badge.closed { background-color: #dc3545; }
+
+.card-content { padding: 20px; }
+
+.restaurant-description {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.vibe-tag {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    margin: 4px 4px 0 0;
+    border: 1px solid #D4AF37;
+}
+
 /* --- TABLE VIEW --- */
 #table-view { 
     display: none; 
@@ -130,6 +193,9 @@ th {
     text-transform: uppercase;
     font-size: 0.85rem;
 }
+
+.status-open { color: #28a745; font-weight: bold; }
+.status-closed { color: #dc3545; font-weight: bold; }
 
    /* --- FOOTER SECTION --- */
 footer {
